@@ -26,6 +26,7 @@
 
   .logo-link {
     text-decoration: none;
+    margin-right: 0.25rem;
   }
 
   .header {
@@ -188,7 +189,7 @@
   .highlight {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   }
-  
+
 #event {
   font-family: "Georgia", serif;
   color: #333;
