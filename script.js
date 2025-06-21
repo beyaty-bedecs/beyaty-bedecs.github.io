@@ -2,7 +2,7 @@ function toggleMenu() {
   document.getElementById('navMenu').classList.toggle('active');
 }
 
-//boomer safe pass handling, please dont hate
+//boomer és meghívón használt betütípus safe pass handling :D
 const hashes = [
   "074d235ee0725bb414c49215dc970fcdd9507d5846a13f8ac50a13268559d5b9",
   "e08d914ad848c0039d964f63b3037664716cd5f4de1163e050bc5d56848810f0",
@@ -12,7 +12,7 @@ const hashes = [
   "b15d775970aa7fe27f8bbc3274b510516d0a57e943dba7a4b4aedcbc51cbad52"
 ]
 
-async function hashPassword(pw) {
+function hashPassword(pw) {
   const encoder = new TextEncoder();
   const data = encoder.encode(pw);
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -20,13 +20,13 @@ async function hashPassword(pw) {
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-// yep its all there anyway...
-async function showSite() {
+//ne ítélj el :(
+function showSite() {
   document.body.classList.remove("auth");
   document.getElementById("loginOverlay").classList.add('d-none');
 }
 
-async function checkLogin() {
+function checkLogin() {
   const storedHash = localStorage.getItem("passHash");
   if (hashes.includes(storedHash)) {
     showSite();
