@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Georgia", serif;
+    background-color:rgb(240, 240, 239);
+    text-align:center;
+  }
+
+  header {
+    width:100%;
+    background-color: #f6f3ee;
+  }
+
+  .img-wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .container {
+    margin-bottom: 5rem;
+  }
+
+  .header {
+    --header-height: 60px;
+    --logo-height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+    height: var(--header-height);
+
+    .hamburger {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        --header-height: 75px;
+        --logo-height: 55px;
+
+        .hamburger {
+          border: 0;
+          display:none;
+        }
+    }
+
+    .logo img {
+      height: var(--logo-height);
+      width: auto;
+      margin: auto;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+
+    .active {
+      background-color: #ddd9d4;
+    }
+
+    a, span {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 0.475rem;
+    }
+  }
+
+  nav a:hover {
+      color: #333;
+      background-color: #ddd9d4;
+  }
+
+  @media (max-width: 767px) {
+    nav {
+      position: absolute;
+      top: var(--header-height);
+      right: 0;
+      width: 12rem;
+      text-align:center;
+      background-color: #f6f3ee;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    .hamburger {
+      border: 0;
+      display: block;
+    }
+  }
+
+  .stuff {
+    height: 350px;
+    width: 100%;
+    background: url("assets/img/header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .links {
+    display:inline-flex;
+    justify-content: center;
+    text-align:left;
+    flex-direction:column;
+  }
+
+  .map-container {
+    width:100%;
+    display: flex;
+    margin-bottom:0.5rem;
+
+    iframe {
+      width: 45%;
+      margin:auto;
+      height: 26rem;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+    }
+  }
+
+  .frame-container {
+    overflow-y: auto;
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      overflow: hidden;
+    }
+  }
+
+  #place, #respond {
+    font-family: "Georgia", serif;
+    color: #333;
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    padding: 0 20px;
+
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+  }
+
+#event {
+  font-family: "Georgia", serif;
+  color: #333;
+  margin: 40px auto;
+  max-width: 600px;
+  line-height: 1.6;
+  padding: 0 20px;
+
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .event-item.highlight {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  }
+
+  .event-item:first-of-type {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .time {
+    min-width: 80px;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .time .separator {
+    font-weight: normal;
+    color: #aaa;
+  }
+
+  .desc {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .note {
+    display:block;
+    font-style: italic;
+    color: #777;
+    margin-top: -4px;
+    font-size: 0.95em;
+  }
+
+  .footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+#loginOverlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#f6f3ee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#loginForm {
+  background:white;
+  padding:2rem;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
+}
+#passwordInput {
+  padding:0.5rem;
+  margin:1rem 0;
+  width:100%;
+  max-width:250px;
+}

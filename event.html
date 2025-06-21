@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R+D Wedding Design</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="R+D Logo">
+          Réka és Dávid
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav id="navMenu">
+          <a href="index.html">Főoldal</a>
+          <a href="place.html">Helyszín</a>
+          <span class="active">Menetrend</span>
+          <a href="respond.html">Visszajelzés</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="event">
+    <h1>Az ünnepi nap menetrendje</h1>
+
+    <div class="event-item">
+      <div class="time">12:20</div>
+      <div class="desc">Érkezés a polgári szertartásra</div>
+    </div>
+
+    <div class="event-item highlight">
+      <div class="time">12:30</div>
+      <div class="desc">
+        Polgári szertartás<br>
+        <span class="note">(Innen 10 perc séta a gyülekezet épületéhez)</span>
+      </div>
+    </div>
+    <div class="event-item">
+      <div class="time">
+        13:15<br>
+        <span class="separator">–</span><br>
+        14:00
+      </div>
+      <div class="desc">Vendégfogadás, készülődés, hangolódás</div>
+    </div>
+
+    <div class="event-item highlight">
+      <div class="time">14:00</div>
+      <div class="desc">Templomi szertartás</div>
+    </div>
+
+    <div class="event-item">
+      <div class="time">
+        14:45<br>
+        <span class="separator">–</span><br>
+        15:15
+      </div>
+      <div class="desc">Gratulációk és fotózás</div>
+    </div>
+
+    <div class="event-item highlight">
+      <div class="time">
+        15:30<br>
+        <span class="separator">–</span><br>
+        18:00
+      </div>
+      <div class="desc">Estebéd</div>
+    </div>
+
+    <div class="note">(20:00 – spontán After party a bátraknak)</div>
+
+    <div class="footer">
+      Szeretettel várunk mindenkit!
+    </div>
+  </div>
+  </div>
+
+
+  <div id="loginOverlay">
+    <form id="loginForm">
+      <h2>Kérlek, add meg a jelszót</h2>
+      <input type="password" id="passwordInput" placeholder="Jelszó" />
+      <br />
+      <p id="errorMsg" class="alert alert-danger mb-3 d-none">Hibás jelszó</p>
+      <button class="btn btn-primary" type="submit">Belépés</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
