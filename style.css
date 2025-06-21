@@ -24,6 +24,10 @@
     margin-bottom: 5rem;
   }
 
+  .logo-link {
+    text-decoration: none;
+  }
+
   .header {
     --header-height: 60px;
     --logo-height: 40px;
@@ -39,7 +43,7 @@
       height: 2rem;
       width: 2rem;
     }
-
+    /* igen, responsive meg minden! */
     @media (min-width: 768px) {
         --header-height: 75px;
         --logo-height: 55px;
@@ -104,14 +108,31 @@
     }
   }
 
-  .stuff {
+  .title-bg {
     height: 350px;
     width: 100%;
-    background: url("assets/img/header.png");
+    background: linear-gradient(0deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)),  url("assets/img/header.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .title {
+    font-size:4rem;
+    padding:1rem;
+    backdrop-filter: blur(4px);
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.825rem;
+  }
+
+
 
   .links {
     display:inline-flex;

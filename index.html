@@ -14,12 +14,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 </head>
 <body class="auth">
-  <!--igen itt minden full static, ingyen kellett hostolni :( ) -->
+  <!--igen itt minden full static, ingyen kellett hostolni :( -->
   <header>
     <div class="container">
       <div class="header">
         <div class="logo">
+          <a href="index.html" class="logo-link">
           <img src="assets/img/logo.png" alt="R+D Logo">
+        </a>
           Réka és Dávid
         </div>
         <button class="hamburger" onclick="toggleMenu()">
@@ -38,22 +40,25 @@
       </div>
     </div>
   </header>
-  <div class="stuff">
+    <!-- advanced UI, ha engem kérdezel -->
+  <div class="title-bg mb-5">
+        <h1 class="title">Rólunk</h1>
   </div>
 
-  <div class="container">
-    <h1>Rólunk</h1>
+  <div class="container mb-5">
     <p>
-      2008 –ban, Török-Zselenszky Tamás barátunk mutatott be minket egymásnak. Közös társaságba kerültünk, majd 2014 Decemberében találtunk egymásra. 2015 óta együtt élünk, 2023 ősze óta vagyunk jegyesek.<br>
-      Az elmúlt évtizedet együtt töltve, számtalan próbát kiált, és sokat erősödött kapcsolatunk. Ezt szeretnénk most hivatalossá tenni, az elkövetkező együtt töltött időre pedig, Isten áldását kérni.
+      2008 –ban, mikor egy barátunk bemutatott minket egymásnak még nem sejtettünk semmit. Az egymásra találásunkra egészen 2014 végéig kellett várni. 2015 óta élünk együtt, majd egy nagyobb ugrás 2023 őszére, mikor is jegyesek lettünk. Bizony a jó dolgokhoz idő kell.
+  <br>
+      Az elmúlt évtizedet együtt töltve, számtalan próbát kiált, és sokat erősödött kapcsolatunk. Ezt szeretnénk most hivatalossá tenni, az elkövetkező együtt töltött időre pedig az Úr áldását kérni.
   </p>
+  <p>Ki gondolta volna mindezt? Nos, valószínüleg sokatok. :)</p>
     <p>
       Köszönjük, ha velünk ünnepelsz!
     </p>
-    <div class="img-wrapper">
-      <img src="assets/img/foto.jpg" class="img-fluid" alt="Mi, 2014-ben">
-    </div>
-  </div>
+    <figure class="figure">
+      <img src="assets/img/foto.jpg" class="figure-img img-fluid rounded">
+      <figcaption class="figure-caption">2014 decemberének haván. Hó már akkor se volt.</figcaption>
+    </figure>
 
 <!-- auth management, a scriptet inkább ne nézd meg :D -->
   <div id="loginOverlay">
