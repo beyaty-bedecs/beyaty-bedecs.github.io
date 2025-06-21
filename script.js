@@ -2,7 +2,8 @@ function toggleMenu() {
   document.getElementById('navMenu').classList.toggle('active');
 }
 
-//boomer és meghívón használt betütípus safe pass handling :D
+//boomer és meghívón használt betütípus safe pass handling
+//igen, ezek a kis/nagybetű és ékezetek különféle kombói. igen. tudom..
 const hashes = [
   "074d235ee0725bb414c49215dc970fcdd9507d5846a13f8ac50a13268559d5b9",
   "e08d914ad848c0039d964f63b3037664716cd5f4de1163e050bc5d56848810f0",
@@ -12,11 +13,13 @@ const hashes = [
   "b15d775970aa7fe27f8bbc3274b510516d0a57e943dba7a4b4aedcbc51cbad52"
 ]
 
-function hashPassword(pw) {
+//ez valami AI witchcraft, bizonyára best-practice :D
+async function hashPassword(pw) {
   const encoder = new TextEncoder();
   const data = encoder.encode(pw);
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
+
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
@@ -39,6 +42,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
   const hashed = await hashPassword(enteredPw);
 
 if(hashes.includes(hashed)){
+    //ez a 8+64 byte bizony ittmarad, bocsesz :)
     localStorage.setItem("passHash", hashed);
     showSite();
   } else {
