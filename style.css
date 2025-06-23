@@ -15,6 +15,13 @@
     background-color: #f6f3ee;
   }
 
+  .font {
+  font-family: "Clicker Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(164,107,28);
+  }
+
   .img-wrapper {
     margin: 0 auto;
     max-width: 100%;
@@ -53,6 +60,11 @@
           border: 0;
           display:none;
         }
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
     }
 
     .logo img {
@@ -112,20 +124,24 @@
   .title-bg {
     height: 350px;
     width: 100%;
-    background: linear-gradient(0deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)),  url("assets/img/header.png");
+    background: linear-gradient(0deg, rgba(246,243,238,0.5), rgba(246,243,238,0.5)),  url("assets/img/header2.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     display:flex;
     justify-content: center;
     align-items: center;
   }
 
   .title {
-    font-size:4rem;
+    font-size:6rem;
     padding:1rem;
-    backdrop-filter: blur(4px);
-    font-weight: bold;
+  }
+
+  .logotext {
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:1px;
   }
 
   p {
